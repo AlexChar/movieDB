@@ -1,0 +1,67 @@
+[
+  {
+    "id": 28,
+    "name": "Action",
+    "total": 11
+  },
+  {
+    "id": 12,
+    "name": "Adventure",
+    "total": 8
+  },
+  {
+    "id": 35,
+    "name": "Comedy",
+    "total": 10
+  },
+  {
+    "id": 80,
+    "name": "Crime",
+    "total": 6
+  },
+  {
+    "id": 18,
+    "name": "Drama",
+    "total": 16
+  },
+  {
+    "id": 10751,
+    "name": "Family",
+    "total": 3
+  },
+  {
+    "id": 14,
+    "name": "Fantasy",
+    "total": 5
+  },
+  {
+    "id": 27,
+    "name": "Horror",
+    "total": 29
+  },
+  {
+    "id": 9648,
+    "name": "Mystery",
+    "total": 5
+  },
+  {
+    "id": 10749,
+    "name": "Romance",
+    "total": 4
+  },
+  {
+    "id": 878,
+    "name": "Science Fiction",
+    "total": 23
+  },
+  {
+    "id": 53,
+    "name": "Thriller",
+    "total": 9
+  },
+  {
+    "id": 37,
+    "name": "Western",
+    "total": 4
+  }
+]

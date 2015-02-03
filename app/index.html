@@ -8,7 +8,22 @@
     <link rel="stylesheet" type="text/css" href="app.css">
   </head>
   <body>
-    
+
+    <div class="container">
+      <div class="row">
+        <div class="well col-sm-10 col-xs-12">
+          <div class="row">
+            <div class="movie-container col-sm-2 col-xs-6" ng-repeat="movie in movieList">
+              <a href="#" class="movie-thumb">
+                <img class="thumbail img-responsive" ng-src="img/posters{{movie.poster_path}}" />
+                <h5>{{movie.title}}</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="catalog/catalog.js"></script>

@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('movieDB', [
-	'movieDB.catalog'
+	'movieDB.catalog',
+	'movieDB.paginate-filter'
 	])

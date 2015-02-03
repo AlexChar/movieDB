@@ -9,15 +9,29 @@
   </head>
   <body>
 
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <span class="glyphicon glyphicon-film"></span>MovieDB
+        </a>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
+      <div class="col-xs-12">
+        <div class="page-header section-title">Most Watched This Week</div>
+      </div>
         <div class="well col-sm-10 col-xs-12">
           <div class="row">
-            <div class="movie-container col-sm-2 col-xs-6" ng-repeat="movie in movieList">
+            <div class="movie-container col-sm-2 col-xs-6" ng-repeat="movie in movieList | paginate:currentPage:pageSize">
               <a href="#" class="movie-thumb">
                 <img class="thumbail img-responsive" ng-src="img/posters{{movie.poster_path}}" />
                 <h5>{{movie.title}}</h5>
               </a>
+            </div>
+            <div class="col-xs-12">
+              <pagination class="pagination" total-items="movieList.length" ng-model="currentPage" items-per-page="pageSize">
             </div>
           </div>
         </div>
@@ -25,7 +39,9 @@
     </div>
 
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="app.js"></script>
     <script src="catalog/catalog.js"></script>
+    <script src="components/paginate/paginate-filter.js"></script>
   </body>
 </html>

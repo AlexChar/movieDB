@@ -1,5 +1,5 @@
 <div class="col-xs-12">
-    <div class="page-header section-title">Most Watched This Week</div>
+    <div class="page-header section-title">{{pageTitle}}</div>
 </div>
 <div class="well col-sm-10 col-xs-12">
   <div class="row">
@@ -12,5 +12,19 @@
     <div class="col-xs-12">
       <pagination class="pagination" total-items="movieList.length" ng-model="currentPage" items-per-page="pageSize">
     </div>
+  </div>
+</div>
+
+<div class="col-sm-2">
+  <div class="section-title genre-title">by genre</div>
+  <div class="list-group">
+    <a href="#" class="list-group-item">
+      <span class="badge">{{movieList.length}}</span>
+      All
+    </a>
+    <a href="#/genre/{{genre.name}}" ng-class="{active: genre.name===genreName}" class="list-group-item" ng-repeat="genre in genreList">
+    <span class="badge">{{genre.total}}</span>
+      {{genre.name}}
+    </a>
   </div>
 </div>

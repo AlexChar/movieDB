@@ -1,10 +1,10 @@
 "use strict";
 
 angular.module('movieDB.movie', ['ui.bootstrap'])
-	.controller('movieCtrl', ['$scope','$filter', '$http', '$routeParams', function($scope, $filter, $http, $routeParams){
+	.controller('movieCtrl', ['$scope','$filter', 'movieAPIservice', '$routeParams', function($scope, $filter, movieAPIservice, $routeParams){
 		$scope.movieId = $routeParams.id;
 
-		$http.get('json/movies.json').success(function(data){
+		movieAPIservice.getMovies().success(function(data){
 			$scope.movie = $filter('filter')(data, {id: parseInt($scope.movieId, 10)}, true)[0];
 		});	
 	}]);

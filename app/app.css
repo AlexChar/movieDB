@@ -60,3 +60,8 @@ body {
 .moviedetails .return-link {
   float: right;
 }
+
+.genre-title{
+  text-align: right;
+  margin-bottom: 0;
+}

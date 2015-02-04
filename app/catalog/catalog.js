@@ -8,8 +8,6 @@ angular.module('movieDB.catalog', ['ui.bootstrap'])
 
 		$http.get('json/movies.json').success(function(data){
 			$scope.movieList = data;
-		});
-
-		
+		});		
 		
 	}]);

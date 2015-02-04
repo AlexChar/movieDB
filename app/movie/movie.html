@@ -1,1 +1,23 @@
-{{movie.title}}
+<div class="well moviedetails col-xs-12">
+	<img class="poster img-thumbnail img-responsive" ng-src="img/posters{{movie.poster_path}}" />
+
+	<a class="return-link" href="#">
+	<button class="return-btn btn btn-default">
+		<span class="glyphicon glyphicon-arrow-left"></span>
+		Return to Catalog
+	</button>
+	</a>
+
+	<h1 class="moveie-title">{{movie.title}}({{movie.release_date | date: 'yyyy'}})</h1>
+	<a ng-repeat="genre in movie.genres" class="btn btn-info" href="#">
+		{{genre.name}}
+	</a>
+	<div class="overview">{{movie.overview}}</div>
+
+	<div class="extra-details">
+		<kbd>Runtime: {{movie.runtime}} minutes</kbd>
+		<kbd>Country: {{movie.production_countries[0].name}}</kbd>
+		<kbd>Language: {{movie.spoken_languages[0].name}}</kbd>
+		<kbd>Release: {{movie.release_date | date}} minutes</kbd>
+	</div>
+</div>

@@ -14,5 +14,5 @@ angular.module('movieDB.catalog', ['ui.bootstrap'])
 		movieAPIservice.getGenres().success(function(data){
 			$scope.genreList = data;
 		});
-		
+
 	}]);
